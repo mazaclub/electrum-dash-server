@@ -2,9 +2,9 @@
 
 params = {
     'Darkcoin_main': {
-        'pubkey_address': 76, #Darkcoin src/chainparams.cpp L69
-        'script_address': 16, #Darkcoin src/chainparams.cpp L70
-        'genesis_hash': '00000ffd590b1485b3caadc19b22e6379c733355108f107a430458cdf3407ab6' #Darkcoin src/chainparams.cpp L62 
+        'pubkey_address': 125,
+        'script_address': 5,
+        'genesis_hash': '00000bb6b5dcf5e81dee7f18ebd51055228d5fb3e41cc62f4034488f8eaf4448'
     },
     'Darkcoin_test': {
         'pubkey_address': 139, #Darkcoin src/chainparams.cpp L137
