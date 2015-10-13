@@ -1,9 +1,9 @@
 from setuptools import setup
 
 setup(
-    name="electrum-drk-server",
+    name="electrum-start-server",
     version="0.9",
-    scripts=['run_electrum_drk_server','electrum-drk-server'],
+    scripts=['run_electrum_drk_server','electrum-start-server'],
     install_requires=['plyvel','jsonrpclib', 'irc>=11'],
     package_dir={
         'electrumserver':'src'
@@ -26,7 +26,7 @@ setup(
     author="Thomas Voegtlin, ELM4ever, Propulsion",
     author_email="thomasv1@gmx.de, Propulsion@DarkcoinTalk.org",
     license="GNU Affero GPLv3",
-    url="https://github.com/spesmilo/electrum-server/, https://github.com/Propulsions/electrum-drk-server/",
+    url="https://github.com/spesmilo/electrum-server/, https://github.com/Propulsions/electrum-start-server/",
     long_description="""Server for the Electrum Lightweight Darkcoin Wallet"""
 )
 

@@ -12,7 +12,7 @@ requirements.
 
 The most up-to date version of this document is available at:
 
-    https://github.com/Propulsions/electrum-drk-server/blob/master/HOWTO.md
+    https://github.com/Propulsions/electrum-start-server/blob/master/HOWTO.md
 
 Conventions
 -----------
@@ -139,8 +139,8 @@ find out the best way to do this.
 We will download the latest git snapshot for Electrum to configure and install it:
 
     $ cd ~
-    $ git clone https://github.com/Propulsions/electrum-drk-server.git
-    $ cd electrum-drk-server/src/darkcoin_hash
+    $ git clone https://github.com/Propulsions/electrum-start-server.git
+    $ cd electrum-start-server/src/darkcoin_hash
     $ sudo python setup.py install
     $ cd ../..
     $ sudo configure
@@ -257,17 +257,17 @@ in case you need to restore it.
 
 ### Step 9. Configure Electrum Darkcoin Server
 
-Darkcoin Electrum reads a config file (/etc/electrum-drk.conf) when starting up. This
+Darkcoin Electrum reads a config file (/etc/electrum-start.conf) when starting up. This
 file includes the database setup, darkcoind RPC setup, and a few other
 options.
 
-The "configure" script listed above will create a config file at /etc/electrum-drk.conf
+The "configure" script listed above will create a config file at /etc/electrum-start.conf
 which you can edit to modify the settings.
 
 Go through the config options and set them to your liking.
 If you intend to run the server publicly have a look at README-IRC.md
 
-### Step 10. Tweak your system for running electrum-drk
+### Step 10. Tweak your system for running electrum-start
 
 Electrum Darkcoin Server currently needs quite a few file handles to use leveldb. It also requires
 file handles for each connection made to the server. It's good practice to increase the
@@ -284,19 +284,19 @@ Two more things for you to consider:
 
 1. To increase security you may want to close darkcoind for incoming connections and connect outbound only
 
-2. Consider restarting darkcoind (together with electrum-drk-server) on a weekly basis to clear out unconfirmed
+2. Consider restarting darkcoind (together with electrum-start-server) on a weekly basis to clear out unconfirmed
    transactions from the local the memory pool which did not propagate over the network.
 
 ### Step 11. (Finally!) Run Electrum Darkcoin Server
 
 The magic moment has come: you can now start your Electrum Darkcoin Server as root (it will su to your unprivileged user):
 
-    # electrum-drk-server start
+    # electrum-start-server start
 
 Note: If you want to run the server without installing it on your system, just run 'run_electrum_drk_server" as the
 unprivileged user. You still will need to install the darkcoin_hash with python setup.py
     
-    $ cd electrum-drk-server/src/darkcoin_hash
+    $ cd electrum-start-server/src/darkcoin_hash
     $ sudo python setup.py install
 
 You should see this in the log file:
@@ -305,15 +305,15 @@ You should see this in the log file:
 
 If you want to stop Electrum server, use the 'stop' command:
 
-    # electrum-drk-server stop
+    # electrum-start-server stop
 
 
-If your system supports it, you may add electrum-drk-server to the /etc/init.d directory. 
+If your system supports it, you may add electrum-start-server to the /etc/init.d directory. 
 This will ensure that the server is started and stopped automatically, and that the database is closed 
 safely whenever your machine is rebooted.
 
-    # ln -s `which electrum-drk-server` /etc/init.d/electrum-drk-server
-    # update-rc.d electrum-drk-server defaults
+    # ln -s `which electrum-start-server` /etc/init.d/electrum-start-server
+    # update-rc.d electrum-start-server defaults
 
 ### Step 12. Test the Electrum Darkcoin Server
 
@@ -331,7 +331,7 @@ darkcoins to confirm that everything is working properly.
 ### Step 13. Join us on IRC, subscribe to the server thread
 
 Say hi to the dev crew, other server operators, and fans on 
-irc.freenode.net #electrum-drk (original is #electrum) and we'll try to congratulate you
+irc.freenode.net #electrum-start (original is #electrum) and we'll try to congratulate you
 on supporting the community by running an Electrum node.
 
 If you're operating a public Electrum server please subscribe

@@ -1,7 +1,7 @@
 #! /bin/bash
 
 
-electrum_config="/etc/electrum-drk.conf"
+electrum_config="/etc/electrum-start.conf"
 if [ ! -f $electrum_config ]; then
     echo "$electrum_config does not exist"
     echo "please run 'configure'"
@@ -103,7 +103,7 @@ case "$1" in
 	$0 start
 	;;
     *)
-	echo "Usage: electrum-drk-server {start|stop|restart|status|getinfo|peers|numpeers|sessions|numsessions}"
+	echo "Usage: electrum-start-server {start|stop|restart|status|getinfo|peers|numpeers|sessions|numsessions}"
 	exit 1
 	;;
 esac

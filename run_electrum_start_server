@@ -82,7 +82,7 @@ def create_config(filename=None):
     # set some defaults, which will be overwritten by the config file
     config.add_section('server')
     config.set('server', 'banner', 'Welcome to Electrum!')
-    config.set('server', 'banner_file', '/etc/electrum-drk.banner')
+    config.set('server', 'banner_file', '/etc/electrum-start.banner')
     config.set('server', 'host', 'localhost')
     config.set('server', 'electrum_rpc_port', '8010')
     config.set('server', 'report_host', '')
@@ -99,8 +99,8 @@ def create_config(filename=None):
     config.set('server', 'password', '')
     config.set('server', 'irc', 'no')
     config.set('server', 'irc_nick', '')
-    config.set('server', 'coin', 'DRK')
-    config.set('server', 'logfile', '/var/log/electrum-drk.log')
+    config.set('server', 'coin', 'START')
+    config.set('server', 'logfile', '/var/log/electrum-start.log')
     config.set('server', 'donation_address', '')
 
     config.add_section('leveldb')
@@ -114,12 +114,12 @@ def create_config(filename=None):
     # try to find the config file in the default paths
     if not filename:
         for path in ('/etc/', ''):
-            filename = path + 'electrum-drk.conf'
+            filename = path + 'electrum-start.conf'
             if os.path.isfile(filename):
                 break
 
     if not os.path.isfile(filename):
-        print 'could not find electrum-drk configuration file "%s"' % filename
+        print 'could not find electrum-start configuration file "%s"' % filename
         sys.exit(1)
 
     attempt_read_config(config, filename)

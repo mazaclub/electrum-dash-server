@@ -11,13 +11,13 @@ stratum_tcp_port = 50001
 #report_stratum_tcp_port = 50001
 #report_stratum_tcp_ssl_port = 50002
 password = secret
-banner = Welcome to Electrum-DRK!
-banner_file = /etc/electrum-drk.banner
+banner = Welcome to Electrum-DASH!
+banner_file = /etc/electrum-start.banner
 #irc = no
 #irc_nick = <yournickname>
 #ssl_certfile = /path/to/electrum-server.crt
 #ssl_keyfile = /path/to/electrum-server.key
-logfile = /var/log/electrum-drk.log
+logfile = /var/log/electrum-start.log
 donation_address = 
 
 [leveldb]
@@ -27,9 +27,9 @@ path =
 # can lower to 100 if performance issues are present
 pruning_limit = 1000
 
-[darkcoind]
-darkcoind_host = localhost
-darkcoind_port = 9998
+[bitcoind]
+bitcoind_host = localhost
+bitcoind_port = 9998
 # user and password from darkcoin.conf
-darkcoind_user = 
-darkcoind_password = 
+bitcoind_user = 
+bitcoind_password = 
