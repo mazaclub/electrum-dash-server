@@ -108,16 +108,16 @@ if ! [ -f $logfile ]; then
 fi
 
 
-darkcoind_user=$(read_config "darkcoind_user")
-if ! [ "$darkcoind_user" ]; then
+bitcoind_user=$(read_config "bitcoind_user")
+if ! [ "$bitcoind_user" ]; then
     read -p "rpcuser (from your darkcoin.conf file): " -r
-    write_config "darkcoind_user" $REPLY
+    write_config "bitcoind_user" $REPLY
 fi
 
-darkcoind_password=$(read_config "darkcoind_password")
-if ! [ "$darkcoind_password" ]; then
+bitcoind_password=$(read_config "bitcoind_password")
+if ! [ "$bitcoind_password" ]; then
     read -p "rpcpassword (from your darkcoin.conf file): " -r
-    write_config "darkcoind_password" $REPLY
+    write_config "bitcoind_password" $REPLY
 fi
 
 
