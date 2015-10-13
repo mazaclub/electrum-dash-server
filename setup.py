@@ -4,7 +4,7 @@ setup(
     name="electrum-dash-server",
     version="0.9",
     scripts=['run_electrum_dash_server','electrum-dash-server'],
-    install_requires=['plyvel','jsonrpclib', 'irc>=11'],
+    install_requires=['plyvel','jsonrpclib', 'irc>=11', 'coinhash>=1.1.5'],
     package_dir={
         'electrumserver':'src'
         },
