@@ -2,5 +2,5 @@
 *.so
 *.o
 .gitignore
-electrum.conf
+electrum*.conf*
 .DS_Store

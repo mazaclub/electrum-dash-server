@@ -232,7 +232,7 @@ def timestr():
 import logging
 import logging.handlers
 
-logger = logging.getLogger('electrum-drk')
+logger = logging.getLogger('electrum-dash')
 
 def init_logger(logfile):
     hdlr = logging.handlers.WatchedFileHandler(logfile)
